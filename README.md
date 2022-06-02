@@ -4,12 +4,12 @@ Genetic pipeline inspired by Google's DeepVariant in order to detect cancer-caus
 
 
 Snakemake workflow:
-1)Simulate genome with VARSIM
-2)Manage bioinformatics files with SAMTOOLS
-3)Extract pileup images with DeepVariant
-4)Train the keras CNN to detect smalls variants (insertion, deletion, snp)
-5)Test the pipeline
-
+<ol>Simulate genome with VARSIM
+  <li>Manage bioinformatics files with SAMTOOLS</li>
+  <li>Extract pileup images with DeepVariant</li>
+  <li>Train the keras CNN to detect smalls variants (insertion, deletion, snp)</li>
+  <li>Test the pipeline</li>
+</ol>
 Contenairisation with Docker and Singularity
 
 See the bellow documents :
