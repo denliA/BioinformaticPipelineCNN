@@ -1,0 +1,160 @@
+Bootstrap: library
+From: ubuntu:20.04
+Stage: build
+%labels
+    Author L3E1 GROUP
+    Version v1.0.0
+
+%help
+    Le singularity du groupe l3e1.
+
+%files
+    env.yml /Neat/
+
+%post
+
+    #mkdir /Neat/
+    cd /Neat/
+    #Pour l'installation des packages
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal main restricted" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal universe" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal-updates universe" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal multiverse" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal-updates multiverse" | tee -a /etc/apt/sources.list
+    echo "deb http://security.ubuntu.com/ubuntu focal-security main restricted" | tee -a /etc/apt/sources.list
+    echo "deb http://security.ubuntu.com/ubuntu focal-security universe" | tee -a /etc/apt/sources.list
+    echo "deb http://security.ubuntu.com/ubuntu focal-security multiverse" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse" | tee -a /etc/apt/sources.list
+    echo "deb http://archive.canonical.com/ubuntu focal partner" | tee -a /etc/apt/sources.list
+    apt-get -y update
+    apt install -y git
+    apt install -y wget
+    apt install -y build-essential 
+    apt install -y libssl-dev
+    apt update
+    apt install -y libgpgme11-dev
+    apt install -y squashfs-tools
+    apt install -y libseccomp-dev 
+    apt install -y pkg-config
+    apt install -y uuid-dev
+    apt install -y libssl-dev
+    apt install -y curl
+    apt install -y make
+    apt install -y unzip
+    apt install -y gzip
+    apt install -y gcc
+    apt install -y libbz2-dev
+    apt install -y zlib1g-dev
+    apt install -y libncurses5-dev 
+    apt install -y libncursesw5-dev 
+    apt install -y liblzma-dev
+    apt install -y g++
+    apt install -y libgsl-dev
+    
+    #telechargement des logiciels
+    curl -O https://mirror.ibcp.fr/pub/gnu/gsl/gsl-latest.tar.gz
+    curl -O https://www.niehs.nih.gov/research/resources/assets/docs/artsrcmountrainier2016.06.05linux.tgz
+    git clone https://github.com/bioinform/varsim.git
+    tar zxvf artsrcmountrainier2016.06.05linux.tgz
+    tar zxvf gsl-latest.tar.gz
+    cd gsl-2.7.1/
+    ./configure && make && make install
+    export CFLAGS="$CFLAGS -I/usr/local/include" CPPFLAGS="$CPPFLAGS -I/usr/local/include" LDFLAGS="$LDFLAGS -L/usr/local/lib"
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib   
+    cd ../art_src_MountRainier_Linux/
+    
+    ./configure && make && make install 
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib 
+    
+    #installation varsim
+    cd ../varsim/
+    ./build.sh
+
+    #singularity dans conteneur singularity
+    apt install -y libglib2.0-dev
+
+    apt install -y build-essential 
+    apt install -y libssl-dev 
+    apt install -y uuid-dev 
+    apt install -y libgpgme11-dev 
+    apt install -y squashfs-tools 
+    apt install -y libseccomp-dev 
+    apt install -y pkg-config
+
+    cd /Neat/
+    #installation go
+    wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
+    rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
+    export PATH=$PATH:/usr/local/go/bin
+    go version
+    git clone --recurse-submodules https://github.com/sylabs/singularity.git
+    cd singularity
+    ./mconfig --without-suid
+    make -C builddir
+    make -C builddir install
+
+
+    
+    cd /Neat/
+    wget https://github.com/samtools/samtools/releases/download/1.15.1/samtools-1.15.1.tar.bz2
+    wget https://github.com/samtools/bcftools/releases/download/1.15.1/bcftools-1.15.1.tar.bz2
+    tar -xf samtools-1.15.1.tar.bz2
+    tar -xf bcftools-1.15.1.tar.bz2
+    cd samtools-1.15.1/
+    ./configure
+    make
+    make install
+    export PATH=/usr/local/bin:$PATH
+    cd ../bcftools-1.15.1/
+    ./configure
+    make
+    make install
+    export PATH=/usr/local/bin:$PATH
+    cd ..
+    rm artsrcmountrainier2016.06.05linux.tgz 
+    rm bcftools-1.15.1.tar.bz2 
+    rm samtools-1.15.1.tar.bz2 
+    rm gsl-latest.tar.gz
+    curl -O https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+    bash Anaconda3-2021.11-Linux-x86_64.sh -b -p /Neat/anaconda
+    export PATH="/Neat/anaconda/bin:$PATH"
+    conda --version
+    /Neat/anaconda/bin/conda env create -f /Neat/env.yml
+    conda install -y -c conda-forge pip numpy 
+    conda update --all
+    #installation package pour conda
+    /Neat/anaconda/envs/py/bin/pip install pip==20.3.4
+    /Neat/anaconda/envs/py/bin/pip install tensorflow==2.2.0
+    /Neat/anaconda/envs/py/bin/pip install pillow
+    /Neat/anaconda/envs/py/bin/pip install pyqtwebengine==5.12
+    /Neat/anaconda/envs/py/bin/pip install pyqt5==5.12
+    /Neat/anaconda/envs/py/bin/pip install protobuf==3.19
+    /Neat/anaconda/envs/py/bin/pip install google-nucleus
+    /Neat/anaconda/envs/py/bin/pip install split-folders
+    /Neat/anaconda/envs/py/bin/pip install scikit-learn
+    
+
+
+
+
+%environment
+        export CFLAGS="$CFLAGS -I/usr/local/include" CPPFLAGS="$CPPFLAGS -I/usr/local/include" LDFLAGS="$LDFLAGS -L/usr/local/lib"
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib   
+        export PATH=$PATH:/usr/local/go/bin
+        export PATH=/usr/local/bin:$PATH
+        export PATH="/Neat/anaconda/bin:$PATH"
+
+%runscript
+    #exec /Neat/anaconda/envs/$(head -n 1 env.yml | cut -f 2 -d ' ')/bin/"$@"
+    exec /Neat/anaconda/envs/py/bin/"$@"
+
+
+
+
+
+
+
+
+
+

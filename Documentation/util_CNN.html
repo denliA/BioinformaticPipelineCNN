@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module util_CNN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>util_CNN</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/util_CNN.py">/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/util_CNN.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="keras.preprocessing.image.html">keras.preprocessing.image</a><br>
+<a href="keras.api._v2.keras.html">keras.api._v2.keras</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.image.html">matplotlib.image</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="tensorflow.html">tensorflow</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-accuracyMatrix"><strong>accuracyMatrix</strong></a>(confusion_matrix)</dt><dd><tt>Donne&nbsp;la&nbsp;précision&nbsp;cad&nbsp;le&nbsp;nombre&nbsp;de&nbsp;cas&nbsp;correctement&nbsp;trouvés<br>
+Entrée&nbsp;:&nbsp;matrice&nbsp;de&nbsp;confusion</tt></dd></dl>
+ <dl><dt><a name="-bytes_feature"><strong>bytes_feature</strong></a>(value)</dt><dd><tt>Returns&nbsp;a&nbsp;bytes_list&nbsp;from&nbsp;a&nbsp;string&nbsp;/&nbsp;byte.</tt></dd></dl>
+ <dl><dt><a name="-confusionMatrixDisplay"><strong>confusionMatrixDisplay</strong></a>(trueList, predictedList)</dt><dd><tt>Dessine&nbsp;une&nbsp;matrice&nbsp;de&nbsp;confusion&nbsp;avec&nbsp;les&nbsp;noms&nbsp;des&nbsp;classes&nbsp;entre&nbsp;la&nbsp;verité&nbsp;et&nbsp;les&nbsp;prédictions<br>
+Entrée&nbsp;:&nbsp;liste&nbsp;des&nbsp;labels&nbsp;predits&nbsp;et&nbsp;vrais</tt></dd></dl>
+ <dl><dt><a name="-convertDataToTfrecord"><strong>convertDataToTfrecord</strong></a>(path_dir, name)</dt><dd><tt>Convertit&nbsp;les&nbsp;images&nbsp;contenues&nbsp;dans&nbsp;le&nbsp;dosseir&nbsp;path_dir&nbsp;en&nbsp;tfrecord<br>
+Entrée&nbsp;:&nbsp;dossier&nbsp;qui&nbsp;contient&nbsp;toutes&nbsp;les&nbsp;images<br>
+Sortie&nbsp;:&nbsp;nom&nbsp;du&nbsp;fichier&nbsp;.tfrecord</tt></dd></dl>
+ <dl><dt><a name="-create_dataset"><strong>create_dataset</strong></a>(filenames, batch_size)</dt><dd><tt>Donne&nbsp;un&nbsp;dataset<br>
+Entrée:&nbsp;nom&nbsp;des&nbsp;fichiers&nbsp;tfrecord&nbsp;qui&nbsp;contiennent&nbsp;le&nbsp;dataset&nbsp;serialisé<br>
+Retourne:&nbsp;liste&nbsp;qui&nbsp;contient&nbsp;une&nbsp;liste&nbsp;de&nbsp;images&nbsp;et&nbsp;une&nbsp;liste&nbsp;de&nbsp;labels&nbsp;qui&nbsp;lui&nbsp;sont&nbsp;associés</tt></dd></dl>
+ <dl><dt><a name="-create_example"><strong>create_example</strong></a>(image, path, example)</dt><dd><tt>Chaque&nbsp;échantillon&nbsp;de&nbsp;données&nbsp;est&nbsp;appelé&nbsp;Example<br>
+Entrée:&nbsp;image,&nbsp;chemin&nbsp;de&nbsp;l'image&nbsp;et&nbsp;les&nbsp;données&nbsp;associées&nbsp;à&nbsp;l'image&nbsp;(vérité&nbsp;récupérée&nbsp;via&nbsp;le&nbsp;titre&nbsp;de&nbsp;l'image)<br>
+Retourne:&nbsp;Example&nbsp;cad&nbsp;le&nbsp;dictionnaire&nbsp;qui&nbsp;stock&nbsp;le&nbsp;mapping&nbsp;entre&nbsp;une&nbsp;clé&nbsp;et&nbsp;nos&nbsp;données</tt></dd></dl>
+ <dl><dt><a name="-evaluateVariant"><strong>evaluateVariant</strong></a>(trueLabel, predictedLabel)</dt><dd><tt>Affiche&nbsp;la&nbsp;précision&nbsp;et&nbsp;la&nbsp;matrice&nbsp;de&nbsp;confusion&nbsp;pour&nbsp;les&nbsp;variants<br>
+Entrée&nbsp;:&nbsp;liste&nbsp;des&nbsp;labels&nbsp;predits&nbsp;et&nbsp;vrais</tt></dd></dl>
+ <dl><dt><a name="-float_feature"><strong>float_feature</strong></a>(value)</dt><dd><tt>Returns&nbsp;a&nbsp;float_list&nbsp;from&nbsp;a&nbsp;float&nbsp;/&nbsp;double.</tt></dd></dl>
+ <dl><dt><a name="-float_feature_list"><strong>float_feature_list</strong></a>(value)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;float_list&nbsp;from&nbsp;a&nbsp;float&nbsp;/&nbsp;double.</tt></dd></dl>
+ <dl><dt><a name="-getModel"><strong>getModel</strong></a>(image, label)</dt><dd><tt>Construit&nbsp;le&nbsp;modèle&nbsp;en&nbsp;utilisant&nbsp;le&nbsp;transfer&nbsp;learning&nbsp;du&nbsp;modèle&nbsp;préentrainé&nbsp;InceptionV3.<br>
+On&nbsp;enlève&nbsp;les&nbsp;dernières&nbsp;couches&nbsp;de&nbsp;classification&nbsp;de&nbsp;l'ancien&nbsp;modèle.<br>
+On&nbsp;lui&nbsp;rajoute&nbsp;nos&nbsp;couches&nbsp;qui&nbsp;correspondent&nbsp;à&nbsp;nos&nbsp;classes&nbsp;[deletion,insertion,changement_base].<br>
+C'est&nbsp;la&nbsp;sortie&nbsp;de&nbsp;notre&nbsp;réseau&nbsp;de&nbsp;neurones.<br>
+Entrée:&nbsp;liste&nbsp;de&nbsp;listes&nbsp;des&nbsp;images&nbsp;et&nbsp;des&nbsp;labels&nbsp;qui&nbsp;lui&nbsp;sont&nbsp;associées<br>
+Retourne:&nbsp;notre&nbsp;modèle</tt></dd></dl>
+ <dl><dt><a name="-getSamples"><strong>getSamples</strong></a>(directory)</dt><dd><tt>Donne&nbsp;une&nbsp;liste&nbsp;de&nbsp;données&nbsp;associées&nbsp;aux&nbsp;images&nbsp;du&nbsp;répertoire<br>
+Entrée:&nbsp;Dossier&nbsp;qui&nbsp;contient&nbsp;les&nbsp;images<br>
+Retourne:&nbsp;liste&nbsp;de&nbsp;dictionnaires</tt></dd></dl>
+ <dl><dt><a name="-image_feature"><strong>image_feature</strong></a>(value)</dt><dd><tt>Returns&nbsp;a&nbsp;bytes_list&nbsp;from&nbsp;a&nbsp;string&nbsp;/&nbsp;byte.</tt></dd></dl>
+ <dl><dt><a name="-int64_feature"><strong>int64_feature</strong></a>(value)</dt><dd><tt>Returns&nbsp;an&nbsp;int64_list&nbsp;from&nbsp;a&nbsp;bool&nbsp;/&nbsp;enum&nbsp;/&nbsp;int&nbsp;/&nbsp;uint.</tt></dd></dl>
+ <dl><dt><a name="-parseImage"><strong>parseImage</strong></a>(path)</dt><dd><tt>Donne&nbsp;les&nbsp;infos&nbsp;associées&nbsp;à&nbsp;une&nbsp;image<br>
+Entrée:&nbsp;Chemin&nbsp;de&nbsp;l'image<br>
+Retourne:&nbsp;Dictionnaire&nbsp;qui&nbsp;contient&nbsp;les&nbsp;données&nbsp;de&nbsp;vérité&nbsp;trouvées&nbsp;dans&nbsp;le&nbsp;titre&nbsp;de&nbsp;l'image</tt></dd></dl>
+ <dl><dt><a name="-parse_tfrecord_fn"><strong>parse_tfrecord_fn</strong></a>(example)</dt><dd><tt>Décode&nbsp;le&nbsp;tfrecord&nbsp;qui&nbsp;était&nbsp;un&nbsp;fichier&nbsp;binaire<br>
+Entrée:&nbsp;un&nbsp;Example&nbsp;de&nbsp;tfrecord<br>
+Retourne:&nbsp;liste&nbsp;composée&nbsp;d'une&nbsp;image&nbsp;et&nbsp;du&nbsp;label&nbsp;qui&nbsp;lui&nbsp;est&nbsp;associé&nbsp;(le&nbsp;vrai&nbsp;variant&nbsp;obtenu&nbsp;grace&nbsp;au&nbsp;titre&nbsp;de&nbsp;l'image)</tt></dd></dl>
+ <dl><dt><a name="-plotAccuracy"><strong>plotAccuracy</strong></a>(history)</dt><dd><tt>Trace&nbsp;un&nbsp;graphe&nbsp;qui&nbsp;mesure&nbsp;la&nbsp;performance&nbsp;du&nbsp;CNN&nbsp;:<br>
+Accuracy&nbsp;en&nbsp;fonction&nbsp;du&nbsp;nombre&nbsp;d'epochs</tt></dd></dl>
+ <dl><dt><a name="-plotLoss"><strong>plotLoss</strong></a>(history)</dt><dd><tt>Trace&nbsp;un&nbsp;graphe&nbsp;qui&nbsp;mesure&nbsp;la&nbsp;performance&nbsp;du&nbsp;CNN&nbsp;:<br>
+Loss&nbsp;en&nbsp;fonction&nbsp;du&nbsp;nombre&nbsp;d'epochs</tt></dd></dl>
+ <dl><dt><a name="-readDecode"><strong>readDecode</strong></a>(enc_tfrecord)</dt><dd><tt>Décode&nbsp;un&nbsp;tfrecord&nbsp;et&nbsp;l'affiche&nbsp;sous&nbsp;forme&nbsp;de&nbsp;texte&nbsp;en&nbsp;clair.&nbsp;Les&nbsp;images&nbsp;sont&nbsp;encodés<br>
+Entrée:&nbsp;nom&nbsp;du&nbsp;fichier&nbsp;qui&nbsp;se&nbsp;finit&nbsp;par&nbsp;.tfrecord.&nbsp;Attention&nbsp;le&nbsp;chemin&nbsp;complet&nbsp;n'est&nbsp;pas&nbsp;inclus</tt></dd></dl>
+ <dl><dt><a name="-seeTfrecord"><strong>seeTfrecord</strong></a>(enc_tfrecord)</dt><dd><tt>#Décode&nbsp;un&nbsp;tfrecord&nbsp;et&nbsp;affiche&nbsp;l'image&nbsp;et&nbsp;le&nbsp;label&nbsp;qui&nbsp;est&nbsp;devenu&nbsp;un&nbsp;tensor</tt></dd></dl>
+ <dl><dt><a name="-testModel"><strong>testModel</strong></a>(testing_dir, BATCH_SIZE)</dt><dd><tt>Teste&nbsp;notre&nbsp;modèle&nbsp;après&nbsp;son&nbsp;entrainement&nbsp;sur&nbsp;des&nbsp;images&nbsp;contenues&nbsp;dans&nbsp;le&nbsp;dossier&nbsp;passé&nbsp;en&nbsp;paramètres<br>
+Entrées&nbsp;:&nbsp;<br>
+Dossier&nbsp;qui&nbsp;contient&nbsp;les&nbsp;nouvelles&nbsp;images&nbsp;sur&nbsp;lequel&nbsp;le&nbsp;réseau&nbsp;ne&nbsp;s'est&nbsp;pas&nbsp;entrainé<br>
+Taille&nbsp;du&nbsp;batch&nbsp;cad&nbsp;le&nbsp;nombre&nbsp;de&nbsp;images&nbsp;données&nbsp;au&nbsp;CNN&nbsp;en&nbsp;1&nbsp;seule&nbsp;fois<br>
+Sortie&nbsp;:&nbsp;Liste&nbsp;de&nbsp;listes&nbsp;de&nbsp;classes&nbsp;prédites&nbsp;par&nbsp;le&nbsp;CNN&nbsp;et&nbsp;des&nbsp;vraies&nbsp;classes&nbsp;pour&nbsp;toutes&nbsp;les&nbsp;images<br>
+du&nbsp;dossier&nbsp;et&nbsp;un&nbsp;dictionnaire&nbsp;ou&nbsp;clé=nom&nbsp;de&nbsp;l'image&nbsp;et&nbsp;valeur=variant</tt></dd></dl>
+ <dl><dt><a name="-typeEvent"><strong>typeEvent</strong></a>(chaine)</dt><dd><tt>Donne&nbsp;le&nbsp;type&nbsp;d'evenement&nbsp;genomique<br>
+Entrée:&nbsp;Nom&nbsp;de&nbsp;fichier<br>
+Retourne:&nbsp;Entier&nbsp;qui&nbsp;représente&nbsp;le&nbsp;type&nbsp;d'evenement&nbsp;genomique&nbsp;(basique)</tt></dd></dl>
+ <dl><dt><a name="-writeDecode"><strong>writeDecode</strong></a>(enc_tfrecord)</dt><dd><tt>Décode&nbsp;un&nbsp;tfrecord&nbsp;et&nbsp;écrit&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;texte<br>
+Entrée:&nbsp;nom&nbsp;du&nbsp;fichier&nbsp;qui&nbsp;se&nbsp;finit&nbsp;par&nbsp;.tfrecord.&nbsp;Attention&nbsp;le&nbsp;chemin&nbsp;complet&nbsp;n'est&nbsp;pas&nbsp;inclus</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>AUTOTUNE</strong> = -1<br>
+<strong>NUM_CLASSES</strong> = 3<br>
+<strong>class_names</strong> = ['deletion', 'insertion', 'changement_base']<br>
+<strong>res_dir</strong> = '/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/result'<br>
+<strong>root_dir</strong> = '/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN'<br>
+<strong>tfrecords_dir</strong> = 'tfrecords'</td></tr></table>
+</body></html>
