@@ -1,0 +1,21 @@
+POS	REF	ALT	RESULTAT	POS-VCF	REF-VCF	ALT-VCF	CHEMIN DU FICHIER
+10012572	GT	G	changement_base	10012572	GT	G,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10032413	T	G	changement_base	10032413	T	G,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10024300	CTT	C-CT	changement_base	10024300	T	<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output30.vcf
+10024300	CTT	C-CT	changement_base	10024300	CTT	C,CTTTT,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10088895	C	T	changement_base	10088895	C	T,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10008948	TA	T	changement_base	10008948	A	<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output30.vcf
+10008948	TA	T	changement_base	10008948	TA	T,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10550594	C	T	changement_base	10550594	C	T,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output30.vcf
+10152939	A	T	changement_base	10152939	A	T	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output25.vcf
+10152939	A	T	changement_base	10152939	T	<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output30.vcf
+10096596	C	T	changement_base	10096596	A	<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output30.vcf
+10096596	C	T	changement_base	10096596	C	T,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10068981	G	A	changement_base	10068981	A	<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output30.vcf
+10068981	G	A	changement_base	10068981	G	A,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10088747	A	G	changement_base	10088747	A	G,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10000694	G	A	changement_base	10000694	G	A,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10384301	C	A	changement_base	10384301	C	A	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/output25.vcf
+10044849	A	G	changement_base	10044849	A	G,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10068162	ATATATATATG	A	changement_base	10068162	ATATATATATG	A,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf
+10012518	T	C	changement_base	10012518	T	C,<*>	/Users/alzhanova/L3E1/2021-l3e1/trunk/CNN/VCF/outputIDV.vcf

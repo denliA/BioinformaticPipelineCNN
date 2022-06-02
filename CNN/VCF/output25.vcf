@@ -1,0 +1,60 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##FILTER=<ID=RefCall,Description="Genotyping model thinks this site is reference.">
+##FILTER=<ID=LowQual,Description="Confidence in this variant being real is below calling threshold.">
+##FILTER=<ID=NoCall,Description="Site has depth=0 resulting in no call.">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position (for use with symbolic alleles)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Conditional genotype quality">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+##FORMAT=<ID=MIN_DP,Number=1,Type=Integer,Description="Minimum DP observed within the GVCF block.">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Read depth for each allele">
+##FORMAT=<ID=VAF,Number=A,Type=Float,Description="Variant allele fractions.">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Phred-scaled genotype likelihoods rounded to the closest integer">
+##FORMAT=<ID=MED_DP,Number=1,Type=Integer,Description="Median DP observed within the GVCF block rounded to the nearest integer.">
+##DeepVariant_version=1.3.0
+##contig=<ID=chr20_maternal,length=63025473>
+##contig=<ID=chr20_paternal,length=63025520>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	default
+chr20_maternal	10035929	.	T	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:29:13:11,2:0.153846:0,28,53
+chr20_maternal	10062041	.	G	C	18.4	PASS	.	GT:GQ:DP:AD:VAF:PL	0/1:17:3:1,2:0.666667:18,0,23
+chr20_maternal	10063194	.	A	C	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:33:10:8,2:0.2:0,32,53
+chr20_maternal	10100870	.	G	T	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:43:11:9,2:0.181818:0,42,61
+chr20_maternal	10103176	.	C	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:21:6:4,2:0.333333:0,20,41
+chr20_maternal	10130635	.	G	C	0.3	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:12:11:9,2:0.181818:0,11,42
+chr20_maternal	10152939	.	A	T	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:33:10:8,2:0.2:0,33,54
+chr20_maternal	10160165	.	A	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:32:12:10,2:0.166667:0,32,55
+chr20_maternal	10160224	.	T	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:40:13:11,2:0.153846:0,40,58
+chr20_maternal	10177149	.	A	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:25:12:10,2:0.166667:0,24,51
+chr20_maternal	10186899	.	A	C	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:49:10:8,2:0.2:0,48,66
+chr20_maternal	10215571	.	A	C	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:21:5:3,2:0.4:0,21,36
+chr20_maternal	10262620	.	G	T	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:49:15:13,2:0.133333:0,49,70
+chr20_maternal	10272140	.	C	A	6.7	PASS	.	GT:GQ:DP:AD:VAF:PL	0/1:7:8:6,2:0.25:5,0,34
+chr20_maternal	10276909	.	A	C	22.6	PASS	.	GT:GQ:DP:AD:VAF:PL	0/1:23:6:4,2:0.333333:22,0,45
+chr20_maternal	10277428	.	C	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:40:8:6,2:0.25:0,40,58
+chr20_maternal	10284041	.	T	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:35:9:7,2:0.222222:0,34,53
+chr20_maternal	10312531	.	C	G	0.2	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:13:11:9,2:0.181818:0,12,46
+chr20_maternal	10384301	.	C	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:45:15:13,2:0.133333:0,44,63
+chr20_maternal	10418960	.	C	T	2.3	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:4:9:7,2:0.222222:0,1,31
+chr20_maternal	10494275	.	A	T	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:27:10:8,2:0.2:0,26,49
+chr20_maternal	10520968	.	A	C	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:38:10:8,2:0.2:0,38,55
+chr20_maternal	10538656	.	A	G	0.2	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:14:3:1,2:0.666667:0,14,21
+chr20_maternal	10555418	.	C	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:31:8:6,2:0.25:0,30,50
+chr20_maternal	10573827	.	T	C	0.2	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:15:8:6,2:0.25:0,14,36
+chr20_maternal	10606762	.	C	A	0.4	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:10:6:4,2:0.333333:0,10,40
+chr20_maternal	10620962	.	G	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:26:10:8,2:0.2:0,26,49
+chr20_maternal	10620966	.	C	T	0.4	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:11:10:8,2:0.2:0,10,41
+chr20_maternal	10648773	.	C	T	8.7	PASS	.	GT:GQ:DP:AD:VAF:PL	0/1:9:7:5,2:0.285714:8,0,39
+chr20_maternal	10657889	.	A	T	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:24:10:8,2:0.2:0,24,48
+chr20_maternal	10681335	.	T	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:28:8:6,2:0.25:0,27,49
+chr20_maternal	10712583	.	A	C	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:33:10:8,2:0.2:0,32,54
+chr20_maternal	10735543	.	T	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:29:6:4,2:0.333333:0,29,45
+chr20_maternal	10747522	.	G	T	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:22:6:4,2:0.333333:0,22,38
+chr20_maternal	10771269	.	A	C	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:23:6:4,2:0.333333:0,22,41
+chr20_maternal	10775202	.	G	T	1.2	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:6:3:1,2:0.666667:0,5,22
+chr20_maternal	10779154	.	A	T	0.1	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:19:4:2,2:0.5:0,18,35
+chr20_maternal	10854393	.	A	G	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:44:13:11,2:0.153846:0,43,60
+chr20_maternal	10929854	.	A	C	0.4	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:10:6:4,2:0.333333:0,9,38
+chr20_maternal	11054003	.	A	T	0.8	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:8:7:5,2:0.285714:0,6,35
+chr20_maternal	11074247	.	T	A	0	RefCall	.	GT:GQ:DP:AD:VAF:PL	0/0:33:9:7,2:0.222222:0,32,51
+chr20_maternal	11086947	.	C	T	0.5	RefCall	.	GT:GQ:DP:AD:VAF:PL	./.:9:11:9,2:0.181818:0,8,41
