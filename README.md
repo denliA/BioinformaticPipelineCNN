@@ -1,6 +1,6 @@
 # BioinformaticPipelineCNN
 
-Genetic pipeline inspired by Google's DeepVariant in order to dectect cancer-causing variants.
+Genetic pipeline inspired by Google's DeepVariant in order to detect cancer-causing alleles.
 
 
 Snakemake workflow:
