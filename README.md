@@ -2,9 +2,11 @@
 
 Genetic pipeline inspired by Google's DeepVariant in order to detect cancer-causing alleles.
 
+Example of a read:
+![Capture d’écran 2022-06-02 à 17 05 58](https://user-images.githubusercontent.com/91119589/171660678-4fd937b2-7996-4969-8fb8-ca25d267c7e7.png)
 
-Snakemake workflow:
-<ol>Simulate genome with VARSIM
+<ol>Snakemake workflow:
+  <li>Simulate genome with VARSIM</li>
   <li>Manage bioinformatics files with SAMTOOLS</li>
   <li>Extract pileup images with DeepVariant</li>
   <li>Train the keras CNN to detect smalls variants (insertion, deletion, snp)</li>
